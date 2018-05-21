@@ -111,7 +111,7 @@ header nav ul li a:hover::before {
     text-decoration: none;
     background-size: cover;
     z-index: 2;
-    display: block;
+    display: none;
     position: fixed;
     top: 13px;
     right: 370px;
