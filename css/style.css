@@ -125,12 +125,11 @@ header nav ul li a:hover::before {
 .bar3,
 .bar4,
 .bar1 {
-    height: 600px;
     background-color: #fff;
     text-align: center;
     overflow: hidden;
-    padding-bottom: 50px;
     margin: 0 auto;
+    padding: 0;
     width: 90%;
 }
 
@@ -141,7 +140,7 @@ h2 {
 }
 
 #o_mnie .ja {
-    width: 200px;
+    width: 250px;
     height: auto;
     float: left;
     margin-right: 50px;
@@ -156,14 +155,19 @@ h2 {
 
 #o_mnie ul {
     clear: both;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 #o_mnie ul li {
     display: inline-block;
     list-style-type: none;
-    margin: 0 50px; 
-    letter-spacing: 3px
+    margin: 0 2%; 
+    width: 23%;
+}
+
+#o_mnie ul li p{
+    letter-spacing: 3px;
+    text-align: center;
 }
 
 #o_mnie li img {
@@ -193,31 +197,26 @@ h2 {
     list-style-type: none;
 }
 
-#portfolio ul li {
-    display: inline-block;
-}
-
 .image {
-    width: 100%;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     position: relative;
     overflow: hidden;
-    color: #fff;
-    font-size: 10px;
-    text-align: center;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.image:before {
+.image::before {
     content: "";
-    background-size: cover;
     background: no-repeat center center;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     transform: scale(1);
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     width: 100%;
     height: 100%;
     top: 0;
@@ -228,7 +227,7 @@ h2 {
     transform: scale(1.1);
 }
 
-.bar2 li:nth-child(1) .image::before {
+.photo1::before {
     background-image: url(../img/coders_3.png);
     background-size: cover;
 }
@@ -239,22 +238,22 @@ h2 {
 }
 
 .photo3::before {
-    background: url(../img/tatry.png) no-repeat center center;
+    background-image: url(../img/kraft.png);
     background-size: cover;
 }
 
 .photo4::before {
-    background: url(../img/todo.png) no-repeat center center;
+    background-image: url(../img/todo.png);
     background-size: cover;
 }
 
 .photo5::before {
-    background: url(../img/leantec.png) no-repeat center center;
+    background-image: url(../img/leantec.png);
     background-size: cover;
 }
 
 .photo6::before {
-    background: url(../img/markus-spiske-357131-unsplash_mini.jpg) no-repeat center center;
+    background-image: url(../img/markus-spiske-357131-unsplash_mini.jpg);
     background-size: cover;
 }
 
@@ -278,8 +277,6 @@ h2 {
 }
 
 #kontakt {
-    height: 400px;
-    padding: 0;
     text-align: center;
 }
 
@@ -299,41 +296,7 @@ h2 {
     margin: 5px;
 }
 
-/*
-.photo5 {
-    float: left;
-    width: 400px;
-    height: 278px;
-    overflow: hidden;
-}
 
-.photo5 img {
-    transition: all 0.5s ease-in-out;
-}
-
-.photo5:hover img {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-}
-
-.photo6 {
-    float: left;
-    width: 400px;
-    height: 278px;
-    overflow: hidden;
-}
-
-.photo6 img {
-    transition: all 0.7s ease-in-out;
-}
-
-.photo6:hover img {
-    -webkit-transform: scale(1.2) rotate(-5deg);
-    -ms-transform: scale(1.2) rotate(-5deg);
-    transform: scale(1.2) rotate(-5deg);
-}
-*/
 
 /*//////////////////
     ANIMATION

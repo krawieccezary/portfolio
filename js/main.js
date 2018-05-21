@@ -9,13 +9,12 @@ $(document).ready(function () {
             
         } else {
             $('.nav').removeClass('sticky');
-           
         }
     };
 
     var scrollBack = function () {
         if ($(this).scrollTop() > 300) $('.home').fadeIn();
-        else $('.home').fadeOut();
+        else $('.home').fadeOut(10);
     };
 
     stickyNav();
