@@ -266,10 +266,36 @@ h2 {
     background-size: cover;
 }
 
-.photo6::before {
+.photo7::before {
     background-image: url(../img/tatry.png);
     background-size: cover;
 }
+
+.photo8::before {
+    background-image: url(../img/philosophia.png);
+    background-size: cover;
+}
+
+.photo9::before {
+    background-image: url(../img/monitory.png);
+    background-size: cover;
+}
+
+.photo10::before {
+    background-image: url(../img/linux.png);
+    background-size: cover;
+}
+
+.photo11::before {
+    background-image: url(../img/kowalski.png);
+    background-size: cover;
+}
+
+.photo12::before {
+    background-image: url(../img/retro.png);
+    background-size: cover;
+}
+
 
 #wiedza {
     height: 100%;
