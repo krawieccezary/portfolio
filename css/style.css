@@ -169,13 +169,13 @@ h2 {
 #o_mnie ul li {
     display: inline-block;
     list-style-type: none;
-    margin: 0 2%; 
-    width: 23%;
+    margin: 0 2% 10px;
 }
 
 #o_mnie ul li p{
     letter-spacing: 3px;
     text-align: center;
+    margin: 0 auto;
 }
 
 #o_mnie li img {
@@ -198,7 +198,8 @@ h2 {
 }
 
 #portfolio {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
+    width: 80%
 }
 
 #portfolio ul {
@@ -213,6 +214,7 @@ h2 {
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
+    border: 1px solid #000;
 }
 
 .image::before {
