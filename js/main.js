@@ -2,47 +2,60 @@ $(document).ready(function () {
     /*****************STICKY NAV****************/
     var NavY = $('.nav').offset().top;
     var stickyNav = function () {
-        var ScrollY = $(window).scrollTop();       
+        var ScrollY = $(window).scrollTop();
 
         if (ScrollY > NavY) {
             $('.nav').addClass('sticky');
-            
+
         } else {
             $('.nav').removeClass('sticky');
         }
     };
 
-    var scrollBack = function () {
-        if ($(this).scrollTop() > 300) $('.home').fadeIn();
+    var fadeScrollTop = function () {
+        if ($(this).scrollTop() > 300)
+            $('.home').fadeIn();
         else $('.home').fadeOut(10);
     };
 
     stickyNav();
 
-/**SCROLL_TO**/    
-    
-    $.scrollTo(0);
+    /**SCROLL_TO**/
 
-    $('#link1').click(function () {
-        $.scrollTo($('#o_mnie'), 1000);
-    });
-    $('#link2').click(function () {
-        $.scrollTo($('#portfolio'), 1000);
-    });
-    $('#link3').click(function () {
-        $.scrollTo($('#wiedza'), 1000);
-    });
-    $('#link4').click(function () {
-        $.scrollTo($('#kontakt'), 1000);
-    });
-    $('.home').click(function () {
-        $.scrollTo($('body'), 1000);
+    $('.nav').on('click', function (event) {
+        if (event.target.dataset.action === 'top')
+            scrollPosition = 0;
+        else {
+            var heightNav = $('.nav').css('height');
+            var link = event.target.dataset.action;
+            /* var heightNavNumber = parseInt(heightNav); */
+            var divTop = $('#' + link).offset().top;
+            var scrollPosition = divTop - parseInt(heightNav);
+        }
+        $('html, body').animate({
+            scrollTop: scrollPosition
+        }, 1000)
     });
 
     $(window).scroll(function () {
         stickyNav();
-        scrollBack();
+        fadeScrollTop();
     });
 
-    
+
+    /***BURGER_NAV***/
+
+    var homeButton = document.getElementsByClassName('home');
+
+    var menuButton = document.getElementById('burger_nav');
+
+    menuButton.addEventListener('click', openMenu);
+
+    function openMenu() {
+        var menu = document.querySelector('header nav ul');
+        menu.classList.toggle('open');
+        menuButton.classList.toggle('active');
+    }
+
+
 });
