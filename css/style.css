@@ -31,15 +31,30 @@ header {
 }
 
 .image_header {
-    background-image: url('../img/header.jpg');
     min-height: 100%;
+    position: relative;
+}
+
+.image_header::before {
+    content: '';
+    animation: fade-slide-down 3s cubic-bezier(0, 0.5, 0, 1) forwards;
+    background: url('../img/header.jpg') no-repeat center center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
 }
 
 .parallax h1 {
-    padding-top: 100px;
+    padding-top: 7%;
     text-align: center;
     letter-spacing: 8px;
     margin: 0;
+    display: block;
+    opacity: 1;
 }
 
 .parallax p {
@@ -340,6 +355,17 @@ h2 {
     ANIMATION
 //////////////////*/
 
+@keyframes fade-slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem) scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 @keyframes pop-in {
     0% {
         opacity: 0;
@@ -404,12 +430,12 @@ header nav ul li:nth-child(4) {
     .image:hover::before {
         transform: scale(1.1);
     }
-    
+
     header nav ul li a:hover::before {
-    visibility: visible;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(1);
-}
+        visibility: visible;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(1);
+    }
 
 }
 
